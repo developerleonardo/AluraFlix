@@ -1,0 +1,13 @@
+:root {
+    --dark: #121212;
+    --blue: #3082E6;
+    --light-blue: #227AE6;
+    --white: #ededed;
+}
+
+body {
+    font-family: "Noto Serif", serif;;
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
