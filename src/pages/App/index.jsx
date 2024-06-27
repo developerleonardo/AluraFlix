@@ -4,13 +4,14 @@ import { Home } from '../Home'
 import { Header } from '../../components/Header';
 import './App.css'
 import { Footer } from '../../components/Footer';
+import { MultimediaContextProvider } from '../../Context';
 
 
 const AppRoutes = () => {
 
-const routes = useRoutes([
-  {path: '/', element: <Home />}
-])
+  const routes = useRoutes([
+    { path: '/', element: <Home /> }
+  ])
 
   return (
     routes
@@ -22,11 +23,13 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <AppRoutes />
-        <Footer />
-      </BrowserRouter>
+      <MultimediaContextProvider>
+        <BrowserRouter>
+          <Header />
+          <AppRoutes />
+          <Footer />
+        </BrowserRouter>
+      </MultimediaContextProvider>
     </>
   )
 }
