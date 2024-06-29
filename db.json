@@ -62,7 +62,7 @@
             "descripcion": "1,2 mil visualizaciones",
             "url": "https://www.youtube.com/embed/5T_Q_NtNLZE",
             "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-            "equipo": "Innovación y gestión"
+            "equipo": "Inteligencia Artificial"
         },
         {
             "titulo": "Descubre el poder del Machine Learning",
@@ -70,7 +70,7 @@
             "url": "https://www.youtube.com/embed/edS0Fhg0xyM",
             "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
             "id": 9,
-            "equipo": "Innovación y gestión"
+            "equipo": "Inteligencia Artificial"
         },
         {
             "titulo": "Desvelando los secretos del Chat GPT: La revolución de la IA",
@@ -78,7 +78,7 @@
             "url": "https://www.youtube.com/embed/0_y09AwR6ns",
             "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
             "id": 10,
-            "equipo": "Innovación y gestión"
+            "equipo": "Inteligencia Artificial"
         },
         {
             "titulo": "Domina tu flujo de trabajo con Kanban: ¡La guía definitiva para la eficiencia!",
@@ -134,7 +134,7 @@
             "url": "https://www.youtube.com/embed/5T_Q_NtNLZE?si=M7D0JeagaKqsoaFs",
             "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Ale.png",
             "id": 17,
-            "equipo": "Back end"
+            "equipo": "Inteligencia Artificial"
         }
     ]
 }

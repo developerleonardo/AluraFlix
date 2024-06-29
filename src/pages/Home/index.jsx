@@ -1,35 +1,42 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Banner } from '../../components/Banner'
 import { Team } from '../../components/Team'
 import { Card } from '../../components/Card'
-import videos from '../../data/db.json'
-import './Home.css'
 import { ModalEditarCard } from '../../components/ModalEditarCard'
+import './Home.css'
+import { MultimediaContext } from '../../Context'
+import { VideoDetail } from '../../components/VideoDetail'
 
 const Home = () => {
-
-  console.log(videos);
+  const { videos, teams } = useContext(MultimediaContext);
   return (
     <>
       <Banner />
-      <Team title='FRONT END'>
-        <Card />
-        <Card />
-        <Card />
-      </Team>
-      <Team title='BACK END'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </Team>
-      <Team title='INNOVACIÓN Y GESTIÓN'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </Team>
+      {
+        teams &&
+        teams.map(((team, index) => {
+          return <Team
+            title={team}
+            key={index}>
+            {
+              videos.map((video) => {
+                if (team === video.equipo) {
+                  return <Card
+                    key={video.id}
+                    title={video.titulo}
+                    description={video.descripcion}
+                    url={video.url}
+                    image={video.imagen}
+                  />
+                }
+              })
+            }
+          </Team>
+        }))
+
+      }
       <ModalEditarCard />
+      <VideoDetail />
     </>
   )
 }

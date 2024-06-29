@@ -1,8 +1,8 @@
 .card_container {
     display: flex;
     flex-direction: column;
-    width: 320px;
-    height: 226px;
+    width: 360px;
+    height: 350px;
     border: 2px solid var(--light-blue);
     box-sizing: border-box;
     border-radius: 10px;
@@ -14,13 +14,33 @@
     height: 70%;
     background-size: cover;
     border-radius: 10px;
+    box-sizing: border-box;
+}
+.card_container img:hover {
+    cursor: pointer;
+}
+.card_info {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    border-top: 2px solid var(--light-blue);
+    box-sizing: border-box;
+    padding: 8px;
+}
+.card_title {
+    color: var(--white);
+    height: 60%;
+    padding-left: 8px;
+}
+.card_title p {
+    margin-top: 0;
 }
 .card_actions_container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 28px;
-    border-top: 2px solid var(--light-blue);
+    height: 40%;
 }
 .action_card {
     display: flex;
