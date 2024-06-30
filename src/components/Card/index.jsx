@@ -4,8 +4,9 @@ import { IoTrashBinOutline } from "react-icons/io5";
 import { CiEdit } from "react-icons/ci";
 import { MultimediaContext } from '../../Context';
 
-const Card = ({ title, description, url, image }) => {
-    const { openModal, openVideoDetail } = useContext(MultimediaContext);
+const Card = ({ title, image, deleteVideo, id }) => {
+    const { openModal, openVideoDetail, updateVideo } = useContext(MultimediaContext);
+
     return (
         <div className='card_container'>
             <img src={image} alt="Image of the video" onClick={openVideoDetail} />
@@ -14,7 +15,7 @@ const Card = ({ title, description, url, image }) => {
                     <p >{title}</p>
                 </div>
                 <div className='card_actions_container'>
-                    <div className='action_card'>
+                    <div className='action_card' onClick={() => deleteVideo(id)}>
                         <IoTrashBinOutline />
                         <p>BORRAR</p>
                     </div>

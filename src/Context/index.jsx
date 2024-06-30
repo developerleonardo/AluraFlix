@@ -23,6 +23,7 @@ const MultimediaContextProvider = ({ children }) => {
     setIsModalOpen(true);
   };
 
+  //Get the videos from the api
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -36,16 +37,42 @@ const MultimediaContextProvider = ({ children }) => {
     fetchData()
   }, [])
 
+  //Delete a video
+  const deleteVideo = async (id) => {
+    await fetch(`http://localhost:3000/videos/${id}`, {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json"
+      },
+    });
+    setVideos((prevVideos) => prevVideos.filter(video => video.id !== id));
+  }
+  //Update any information of a video
+  const updateVideo = async (id, updatedInfo) => {
+    const conection = await fetch(`http://localhost:3000/videos/${id}`, {
+      method: "PUT",
+      headers: {
+          "content-type": "application/json"
+      },
+      body: updatedInfo
+  });
+  setVideos(updatedInfo)
+  return conection
+  }
+
   return (
     <MultimediaContext.Provider value={{
       isModalOpen,
       closeModal,
       openModal,
       videos,
+      setVideos,
       teams,
       isAsideOpen,
       openVideoDetail,
-      closeVideoDetail
+      closeVideoDetail,
+      deleteVideo,
+      updateVideo
     }}>
       {children}
     </MultimediaContext.Provider>

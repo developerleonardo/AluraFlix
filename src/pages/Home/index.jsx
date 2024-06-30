@@ -8,7 +8,8 @@ import { MultimediaContext } from '../../Context'
 import { VideoDetail } from '../../components/VideoDetail'
 
 const Home = () => {
-  const { videos, teams } = useContext(MultimediaContext);
+  const { videos, teams, deleteVideo } = useContext(MultimediaContext);
+
   return (
     <>
       <Banner />
@@ -27,6 +28,8 @@ const Home = () => {
                     description={video.descripcion}
                     url={video.url}
                     image={video.imagen}
+                    id={video.id}
+                    deleteVideo={deleteVideo}
                   />
                 }
               })

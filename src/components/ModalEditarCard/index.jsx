@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { IoMdClose } from "react-icons/io";
 import { MultimediaContext } from '../../Context';
 import './ModalEditarCard.css';
@@ -8,6 +8,19 @@ const ModalEditarCard = () => {
         isModalOpen,
         closeModal
     } = useContext(MultimediaContext);
+    const form = useRef(null)
+
+    const updateVideo = async (id) => {
+        const formData = new FormData(form.current);
+        const data = {
+            titulo: formData.get('titulo'),
+            equipo: formData.get('equipo'),
+            imagen: formData.get('imagen'),
+            url: formData.get('url'),
+            descripcion: formData.get('descripcion')
+        }
+        const stringifiedVideo = JSON.stringify(data)
+    }
 
     return (
         <>
@@ -17,30 +30,31 @@ const ModalEditarCard = () => {
                         <IoMdClose onClick={closeModal} />
                         <h3>EDITAR CARD</h3>
                         <div className='form_container'>
-                            <form method='dialog' className='edit_card_form'>
+                            <form method='dialog' className='edit_card_form' ref={form}>
                                 <div className='input_container'>
-                                    <label htmlFor="name">Título</label>
-                                    <input type="text" name='name' placeholder='Qué es Javascript?' />
+                                    <label htmlFor="titulo">Título</label>
+                                    <input type="text" name='titulo' placeholder='Qué es Javascript?' />
                                 </div>
                                 <div className='input_container'>
-                                    <label htmlFor="category">Categoría</label>
-                                    <select name="category" id="category">
-                                        <option value="frontend" className='option'>Front end</option>
-                                        <option value="backend" className='option'>Back end</option>
-                                        <option value="innovacion" className='option'>Innovación y gestión</option>
+                                    <label htmlFor="equipo">Categoría</label>
+                                    <select name="equipo" id="equipo">
+                                        <option value="Front end" className='option'>Front end</option>
+                                        <option value="Back end" className='option'>Back end</option>
+                                        <option value="Innovación y gestión" className='option'>Innovación y gestión</option>
+                                        <option value="Inteligencia Artificial" className='option'>Inteligencia Artificial</option>
                                     </select>
                                 </div>
                                 <div className='input_container'>
-                                    <label htmlFor="image">Imagen</label>
-                                    <input type="text" name='image' placeholder='https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true' />
+                                    <label htmlFor="imagen">Imagen</label>
+                                    <input type="text" name='imagen' placeholder='https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true' />
                                 </div>
                                 <div className='input_container'>
-                                    <label htmlFor="video">Video</label>
-                                    <input type="text" name='video' placeholder='https://www.youtube.com/embed/QjOWz9avkg8' />
+                                    <label htmlFor="url">Video</label>
+                                    <input type="text" name='url' placeholder='https://www.youtube.com/embed/QjOWz9avkg8' />
                                 </div>
                                 <div className='input_container'>
-                                    <label htmlFor="description">Descripción</label>
-                                    <textarea name="description" id="description" placeholder='Escribe la descripción del video aquí'></textarea>
+                                    <label htmlFor="descripcion">Descripción</label>
+                                    <textarea name="descripcion" id="descripcion" placeholder='Escribe la descripción del video aquí'></textarea>
                                 </div>
                                 <div className='buttons_form_container'>
                                     <button formMethod='dialog' className='form_button'>GUARDAR</button>
