@@ -33,12 +33,12 @@
       "equipo": "Back end"
     },
     {
-      "id": "5",
       "titulo": "Como utilizar el Display block, inline, inline-block #aluramás",
-      "descripcion": "1,2 mil visualizaciones",
-      "url": "https://www.youtube.com/embed/AG2QssLpQzI",
+      "equipo": "Back end",
       "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Front end"
+      "url": "https://www.youtube.com/embed/AG2QssLpQzI",
+      "descripcion": "1,2 mil visualizaciones",
+      "id": "5"
     },
     {
       "id": "6",
@@ -127,14 +127,6 @@
       "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
       "id": "16",
       "equipo": "Front end"
-    },
-    {
-      "titulo": "Hello Java",
-      "equipo": "Innovación y gestión",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "url": "https://www.youtube.com/embed/o8x_n4Px1N0",
-      "descripcion": "Hello world",
-      "id": "7f53"
     }
   ]
 }
