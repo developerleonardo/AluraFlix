@@ -20,14 +20,14 @@ const ModalEditarCard = () => {
         url: "",
         descripcion: ""
     });
-    // assing the values of the video to each input field of the modal
+    // assign the values of the video to each input field of the modal
     useEffect(() => {
         if (currentVideoId) {
             const currentVideo = videos.find(video => video.id === currentVideoId);
             if (currentVideo) {
                 setFormData({
                     titulo: currentVideo.titulo,
-                    equipo: currentVideo.equpo,
+                    equipo: currentVideo.equipo,
                     imagen: currentVideo.imagen,
                     url: currentVideo.url,
                     descripcion: currentVideo.descripcion
@@ -45,7 +45,6 @@ const ModalEditarCard = () => {
     }
 
     const updateCurrentVideo = async () => {
-
         const stringifiedVideo = JSON.stringify(formData);
         await updateVideo(currentVideoId, stringifiedVideo);
         closeModal();
@@ -73,13 +72,15 @@ const ModalEditarCard = () => {
                                     />
                                 </div>
                                 <div className='input_container'>
-                                    <label htmlFor="equipo">Categoría</label>
+                                    <label htmlFor="equipo">Equipo</label>
                                     <select
                                         name="equipo"
                                         id="equipo"
                                         value={formData.equipo}
                                         onChange={handleChange}
+                                        required
                                     >
+                                        <option value="" disabled defaultValue="" className='option'>Seleccione una categoría</option>
                                         <option value="Front end" className='option'>Front end</option>
                                         <option value="Back end" className='option'>Back end</option>
                                         <option value="Innovación y gestión" className='option'>Innovación y gestión</option>

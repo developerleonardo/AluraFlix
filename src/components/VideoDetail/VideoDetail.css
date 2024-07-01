@@ -11,7 +11,7 @@
     box-shadow: 2px 4px 10px var(--light-blue);
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 48px 24px;
     color: var(--white);
     justify-content: center;
     align-items: center;
@@ -32,8 +32,9 @@
 }
 .video_image {
     width: 100%;
-    height: 50%;
+    height: 25%;
     margin: 0;
+    padding-top: 24px;
 }
 .video_image img {
     object-fit: cover;
@@ -42,7 +43,8 @@
 }
 .video_description {
     margin-top: 24px;
-    height: 30%;
+    height: 60%;
+    padding-top: 24px;
 }
 .watch_video {
     width: 250px;

@@ -9,6 +9,7 @@ const MultimediaContextProvider = ({ children }) => {
     "Front end", "Back end", "Innovación y gestión", "Inteligencia Artificial"
   ]);
   const [isAsideOpen, setIsAsideOpen] = useState(false);
+  const [videoToShow, setVideoToShow] = useState([]);
   // State which contains the current id of any video which is setted with the function openModal
   const [currentVideoId, setCurrentVideoId] = useState(null);
   const openVideoDetail = () => {
@@ -82,7 +83,9 @@ const MultimediaContextProvider = ({ children }) => {
       closeVideoDetail,
       deleteVideo,
       updateVideo,
-      currentVideoId
+      currentVideoId,
+      videoToShow,
+      setVideoToShow
     }}>
       {children}
     </MultimediaContext.Provider>

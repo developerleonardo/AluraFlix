@@ -5,14 +5,18 @@ import { CiEdit } from "react-icons/ci";
 import { MultimediaContext } from '../../Context';
 import { ModalEditarCard } from '../ModalEditarCard';
 
-const Card = ({ title, image, deleteVideo, id, children }) => {
-    const { openModal, openVideoDetail } = useContext(MultimediaContext);
+const Card = ({ title, image, deleteVideo, id, description, url, children }) => {
+    const { openModal, openVideoDetail, setVideoToShow } = useContext(MultimediaContext);
+    const showVideoDetail = (image, description, url, id ) => {
+        openVideoDetail();
+        setVideoToShow({image, description, url, id})
+    }
 
     return (
         <>
             <div className='card_container'>
                 {children}
-                <img src={image} alt="Image of the video" onClick={openVideoDetail} />
+                <img src={image} alt="Image of the video" onClick={() => showVideoDetail(image, description, url, id)} />
                 <div className='card_info'>
                     <div className='card_title'>
                         <p>{title}</p>

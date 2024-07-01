@@ -1,132 +1,151 @@
 {
   "videos": [
     {
-      "id": "1",
       "titulo": "Front-end vs. Back-end: ¡Descubre el lado perfecto para ti! #LuchaDev",
-      "descripcion": "3 mil visualizaciones",
+      "equipo": "Front end",
+      "imagen": "https://i.ytimg.com/vi/R9uaBxgCkyA/hqdefault.jpg",
       "url": "https://www.youtube.com/embed/QjOWz9avkg8",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Back end"
+      "descripcion": "Este video discute las diferencias entre el desarrollo front-end y back-end, incluyendo las habilidades necesarias, las herramientas y tecnologías utilizadas en cada uno, y ofrece consejos para ayudarte a decidir cuál de estos dos enfoques es el más adecuado para tu carrera en desarrollo web.",
+      "id": "1"
     },
     {
-      "id": "2",
       "titulo": "¿Cómo ser un Profesional en T? Conociendo al Tech Guide",
-      "descripcion": "1,5 mil visualizaciones",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://i.ytimg.com/vi/0udk1vXmwkc/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/0udk1vXmwkc",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Innovación y gestión"
+      "descripcion": "Este video presenta el concepto del profesional en T, destacando la importancia de tener conocimientos profundos en un área específica y habilidades generales en otras. También se ofrece una guía para desarrollar este perfil profesional en el ámbito tecnológico.",
+      "id": "2"
     },
     {
-      "id": "3",
       "titulo": "¡Domina CSS Flexbox con FlexboxFroggy! Aprende jugando en este desafío divertido",
-      "descripcion": "30 mil visualizaciones",
+      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.irinadelgado.com%2Fque-es-flexbox-froggy%2F&psig=AOvVaw2J0HJEgUpn1STbthpnj6YK&ust=1719937609486000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKCemYShhocDFQAAAAAdAAAAABAE",
       "url": "https://www.youtube.com/embed/MXPhyN5t0uQ",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Front end"
+      "descripcion": "30 mil visualizaciones",
+      "id": "3"
     },
     {
-      "id": "4",
       "titulo": "¿Qué significa ser un Desarrollador Full Stack?",
-      "descripcion": "2,5 mil visualizaciones",
-      "url": "https://www.youtube.com/embed/eejIHbOk_uI",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Back end"
-    },
-    {
-      "titulo": "Como utilizar el Display block, inline, inline-block #aluramás",
       "equipo": "Back end",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "url": "https://www.youtube.com/embed/AG2QssLpQzI",
-      "descripcion": "1,2 mil visualizaciones",
-      "id": "5"
+      "imagen": "https://i.ytimg.com/vi/eejIHbOk_uI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/embed/eejIHbOk_uI",
+      "descripcion": "Este video explica qué significa ser un desarrollador Full Stack, detallando las habilidades necesarias, las tecnologías y lenguajes que debe dominar, y las responsabilidades que implica trabajar tanto en el front-end como en el back-end del desarrollo web.",
+      "id": "4"
     },
     {
-      "id": "6",
       "titulo": "Explorando el poder del Back-End en el Desarrollo Web",
-      "descripcion": "1,6 mil visualizaciones",
+      "equipo": "Back end",
+      "imagen": "https://i.ytimg.com/vi/Z024LSCMqFk/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/Z024LSCMqFk",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Back end"
+      "descripcion": "Este video aborda las funciones y tecnologías clave del back-end en el desarrollo web, destacando cómo se gestionan bases de datos, servidores y APIs para crear aplicaciones robustas y eficientes.",
+      "id": "6"
     },
     {
-      "id": "7",
       "titulo": "¿Sabes cómo organizar tu rutina de estudio? Descubre aquí | #aluramás",
-      "descripcion": "3,2 mil visualizaciones",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://i.ytimg.com/vi/3mDnrL8YVaA/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/Nts3P35mHzE",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Innovación y gestión"
+      "descripcion": "Este video proporciona consejos y estrategias para organizar eficazmente tu rutina de estudio, incluyendo técnicas de gestión del tiempo, creación de horarios y métodos para maximizar la productividad y el aprendizaje",
+      "id": "7"
     },
     {
-      "id": "8",
       "titulo": "Cómo evitar robo de vehículo con Inteligencia Artificial | #aluramás",
-      "descripcion": "1,2 mil visualizaciones",
+      "equipo": "Inteligencia Artificial",
+      "imagen": "https://i.ytimg.com/vi/5T_Q_NtNLZE/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/5T_Q_NtNLZE",
-      "imagen": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true",
-      "equipo": "Inteligencia Artificial"
+      "descripcion": "Este video discute el uso de tecnologías de inteligencia artificial para prevenir el robo de vehículos, destacando sistemas de seguridad avanzados y métodos de monitoreo y detección.",
+      "id": "8"
     },
     {
       "titulo": "Descubre el poder del Machine Learning",
-      "descripcion": "1 mil visualizaciones",
+      "equipo": "Inteligencia Artificial",
+      "imagen": "https://i.ytimg.com/vi/edS0Fhg0xyM/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/edS0Fhg0xyM",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "id": "9",
-      "equipo": "Inteligencia Artificial"
+      "descripcion": "Este video introduce el concepto de machine learning, explicando cómo funciona, sus aplicaciones prácticas en diversos campos y el impacto que tiene en la tecnología moderna.",
+      "id": "9"
     },
     {
       "titulo": "Desvelando los secretos del Chat GPT: La revolución de la IA",
-      "descripcion": "9 mil visualizaciones",
+      "equipo": "Inteligencia Artificial",
+      "imagen": "https://i.ytimg.com/vi/0_y09AwR6ns/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/0_y09AwR6ns",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "id": "10",
-      "equipo": "Inteligencia Artificial"
+      "descripcion": "Este video explora el funcionamiento de Chat GPT, una avanzada inteligencia artificial de procesamiento del lenguaje natural, destacando sus capacidades, aplicaciones y cómo está revolucionando la interacción humano-computadora.",
+      "id": "10"
     },
     {
       "titulo": "Domina tu flujo de trabajo con Kanban: ¡La guía definitiva para la eficiencia!",
-      "descripcion": "4 mil visualizaciones",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://i.ytimg.com/vi/ew1mwLviTWY/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/ew1mwLviTWY",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "id": "11",
-      "equipo": "Innovación y gestión"
+      "descripcion": "Este video ofrece una guía completa sobre cómo utilizar la metodología Kanban para mejorar el flujo de trabajo, aumentar la eficiencia y gestionar proyectos de manera visual y organizada.",
+      "id": "11"
     },
     {
       "titulo": "Empresas que aprenden | #aluramás",
-      "descripcion": "7 mil visualizaciones",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://i.ytimg.com/vi/mwNfWRsDDWE/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/mwNfWRsDDWE",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "id": "12",
-      "equipo": "Innovación y gestión"
+      "descripcion": "Este video explora el concepto de organizaciones que aprenden, analizando cómo las empresas pueden fomentar una cultura de aprendizaje continuo y adaptación para mantenerse competitivas en el mercado.",
+      "id": "12"
     },
     {
       "titulo": "¿Sabes qué es NodeJS? #AluraTips",
-      "descripcion": "3 mil visualizaciones",
+      "equipo": "Back end",
+      "imagen": "https://i.ytimg.com/vi/o8x_n4Px1N0/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/o8x_n4Px1N0",
-      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
-      "id": "13",
-      "equipo": "Back end"
+      "descripcion": "Este video explica qué es NodeJS, sus características principales, cómo se utiliza en el desarrollo de aplicaciones del lado del servidor y sus ventajas en términos de rendimiento y escalabilidad.",
+      "id": "13"
     },
     {
       "titulo": "Como utilizar el Display block, inline, inline-block",
-      "descripcion": "",
+      "imagen": "https://i.ytimg.com/vi/AG2QssLpQzI/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/AG2QssLpQzI?si=6Yn355wcxAqU7_Ld",
-      "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
-      "id": "14",
-      "equipo": "Front end"
+      "descripcion": "",
+      "id": "14"
     },
     {
       "titulo": "Productividad en el trabajo remoto",
-      "descripcion": "",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://i.ytimg.com/vi/AULPtYo25Lw/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/AULPtYo25Lw?si=UGdKX1NSrEcQ0jfn",
-      "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Gabi.png",
-      "id": "15",
-      "equipo": "Innovación y gestión"
+      "descripcion": "Este video ofrece consejos y estrategias para mantener y mejorar la productividad mientras se trabaja de manera remota, incluyendo la gestión del tiempo, la creación de un espacio de trabajo efectivo y el uso de herramientas digitales.",
+      "id": "15"
     },
     {
       "titulo": "¿Cuáles son las principales áreas de la programación?",
-      "descripcion": "",
+      "imagen": "https://i.ytimg.com/vi/03cxUlwLVt4/maxresdefault.jpg",
       "url": "https://www.youtube.com/embed/03cxUlwLVt4?si=zVCUQNO-eS2RZQTO",
-      "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
-      "id": "16",
-      "equipo": "Front end"
+      "descripcion": "",
+      "id": "16"
+    },
+    {
+      "titulo": "¡Domina CSS Flexbox con FlexboxFroggy! Aprende jugando en este desafío divertido",
+      "imagen": "https://i0.wp.com/www.irinadelgado.com/wp-content/uploads/2023/11/Flexbox-Froggy.png?fit=800%2C450&ssl=1",
+      "url": "https://www.youtube.com/embed/MXPhyN5t0uQ",
+      "descripcion": "30 mil visualizaciones",
+      "id": "0747"
+    },
+    {
+      "titulo": "Como utilizar el Display block, inline, inline-block #aluramás",
+      "imagen": "https://i.ytimg.com/vi/AG2QssLpQzI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/embed/AG2QssLpQzI",
+      "descripcion": "1,2 mil visualizaciones",
+      "id": "eff3"
+    },
+    {
+      "titulo": "¡Domina CSS Flexbox con FlexboxFroggy! Aprende jugando en este desafío divertido",
+      "equipo": "Front end",
+      "imagen": "https://i.ytimg.com/vi/MXPhyN5t0uQ/maxresdefault.jpg",
+      "url": "https://www.youtube.com/embed/MXPhyN5t0uQ",
+      "descripcion": "Este video enseña cómo dominar CSS Flexbox utilizando FlexboxFroggy, un juego interactivo que ayuda a aprender los conceptos y técnicas de Flexbox de manera divertida y práctica.",
+      "id": "373e"
+    },
+    {
+      "titulo": "Como utilizar el Display block, inline, inline-block #aluramás",
+      "equipo": "Front end",
+      "imagen": "https://i.ytimg.com/vi/AG2QssLpQzI/maxresdefault.jpg",
+      "url": "https://www.youtube.com/embed/AG2QssLpQzI?si=6Yn355wcxAqU7_Ld",
+      "descripcion": "Este video explica cómo utilizar las propiedades CSS display: block, inline, e inline-block. Se detallan sus diferencias, ejemplos de uso práctico, y cómo afectan el diseño y la disposición de los elementos en una página web.",
+      "id": "e406"
     }
   ]
 }

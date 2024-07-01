@@ -3,9 +3,10 @@ import { useContext } from 'react';
 import { MultimediaContext } from '../../Context';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import './VideoDetail.css';
+import { Link } from 'react-router-dom';
 
 const VideoDetail = () => {
-    const { videos, isAsideOpen, closeVideoDetail } = useContext(MultimediaContext);
+    const { videos, isAsideOpen, closeVideoDetail, videoToShow } = useContext(MultimediaContext);
     return (
         <>
             {
@@ -16,10 +17,12 @@ const VideoDetail = () => {
                         <IoIosCloseCircleOutline onClick={closeVideoDetail} />
                     </div>
                     <figure className='video_image'>
-                        <img src='https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg' alt="Detalle del videos" />
+                        <img src={videoToShow.image} alt={videoToShow.title} />
                     </figure>
-                    <p className='video_description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi exercitationem dolores excepturi eum maiores voluptatem natus aspernatur officia placeat, error asperiores harum veniam commodi odio deleniti neque minima ad non?</p>
-                    <button className='watch_video'>Ver Video</button>
+                    <p className='video_description'>{videoToShow.description}</p>
+                    <Link to={`http://localhost:5173/${videoToShow.id}`}>
+                        <button className='watch_video'>Ver Video</button>
+                    </Link>
                 </aside>
             }
         </>

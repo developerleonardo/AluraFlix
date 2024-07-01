@@ -6,13 +6,15 @@ import './App.css'
 import { Footer } from '../../components/Footer';
 import { MultimediaContextProvider } from '../../Context';
 import { NewVideo } from '../NewVideo';
+import { Video } from '../Video';
 
 
 const AppRoutes = () => {
 
   const routes = useRoutes([
     { path: '/', element: <Home /> },
-    { path: '/nuevo-video', element: <NewVideo /> }
+    { path: '/nuevo-video', element: <NewVideo /> },
+    { path: '/:id', element: <Video /> },
   ])
 
   return (
