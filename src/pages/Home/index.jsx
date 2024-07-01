@@ -30,7 +30,9 @@ const Home = () => {
                     image={video.imagen}
                     id={video.id}
                     deleteVideo={deleteVideo}
-                  />
+                  >
+                    <ModalEditarCard id={video.id} />
+                  </Card>
                 }
               })
             }
@@ -38,7 +40,6 @@ const Home = () => {
         }))
 
       }
-      <ModalEditarCard />
       <VideoDetail />
     </>
   )

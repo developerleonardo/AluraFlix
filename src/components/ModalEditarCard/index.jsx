@@ -6,11 +6,14 @@ import './ModalEditarCard.css';
 const ModalEditarCard = () => {
     const {
         isModalOpen,
-        closeModal
+        closeModal,
+        updateVideo,
+        videos,
+        currentVideoId
     } = useContext(MultimediaContext);
     const form = useRef(null)
 
-    const updateVideo = async (id) => {
+    const updateCurrentVideo = async () => {
         const formData = new FormData(form.current);
         const data = {
             titulo: formData.get('titulo'),
@@ -19,12 +22,16 @@ const ModalEditarCard = () => {
             url: formData.get('url'),
             descripcion: formData.get('descripcion')
         }
-        const stringifiedVideo = JSON.stringify(data)
+        const stringifiedVideo = JSON.stringify(data);
+        updateVideo(currentVideoId, stringifiedVideo);
+        closeModal();
     }
+
+    const currentVideo = videos.find(video => video.id === currentVideoId)
 
     return (
         <>
-            {isModalOpen &&
+            {isModalOpen && currentVideo &&
                 <div className='overlay'>
                     <dialog className='modal' >
                         <IoMdClose onClick={closeModal} />
@@ -57,7 +64,7 @@ const ModalEditarCard = () => {
                                     <textarea name="descripcion" id="descripcion" placeholder='Escribe la descripción del video aquí'></textarea>
                                 </div>
                                 <div className='buttons_form_container'>
-                                    <button formMethod='dialog' className='form_button'>GUARDAR</button>
+                                    <button formMethod='dialog' className='form_button' onClick={updateCurrentVideo}>GUARDAR</button>
                                     <input type="reset" className='form_button' value='LIMPIAR' />
                                 </div>
                             </form>

@@ -9,6 +9,8 @@ const MultimediaContextProvider = ({ children }) => {
     "Front end", "Back end", "Innovación y gestión", "Inteligencia Artificial"
   ]);
   const [isAsideOpen, setIsAsideOpen] = useState(false);
+  // State which contains the current id of any video which is setted with the function openModal
+  const [currentVideoId, setCurrentVideoId] = useState(null);
   const openVideoDetail = () => {
     setIsAsideOpen(true);
   };
@@ -18,9 +20,12 @@ const MultimediaContextProvider = ({ children }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setCurrentVideoId(null)
   }
-  const openModal = () => {
+  // Sets the state with the current id of the video so it can be updated
+  const openModal = (id) => {
     setIsModalOpen(true);
+    setCurrentVideoId(id)
   };
 
   //Get the videos from the api
@@ -49,15 +54,19 @@ const MultimediaContextProvider = ({ children }) => {
   }
   //Update any information of a video
   const updateVideo = async (id, updatedInfo) => {
-    const conection = await fetch(`http://localhost:3000/videos/${id}`, {
-      method: "PUT",
-      headers: {
+    try {
+      await fetch(`http://localhost:3000/videos/${id}`, {
+        method: "PUT",
+        headers: {
           "content-type": "application/json"
-      },
-      body: updatedInfo
-  });
-  setVideos(updatedInfo)
-  return conection
+        },
+        body: updatedInfo
+      });
+      const updatedVideo = JSON.parse(updatedInfo);
+      setVideos((prevVideos) => prevVideos.map(video => (video.id === id ? updatedVideo : video)))
+    } catch {
+      console.log("Error updating the video");
+    }
   }
 
   return (
@@ -72,7 +81,8 @@ const MultimediaContextProvider = ({ children }) => {
       openVideoDetail,
       closeVideoDetail,
       deleteVideo,
-      updateVideo
+      updateVideo,
+      currentVideoId
     }}>
       {children}
     </MultimediaContext.Provider>
