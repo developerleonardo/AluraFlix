@@ -116,3 +116,8 @@
     border-color: var(--light-blue);
     color: var(--light-blue)
 }
+@media (width < 630px) {
+    .modal {
+        width: 100%;
+    }
+}

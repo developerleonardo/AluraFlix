@@ -12,35 +12,35 @@ const Home = () => {
 
   return (
     <>
-      <Banner />
-      {
-        teams &&
-        teams.map(((team, index) => {
-          return <Team
-            title={team}
-            key={index}>
-            {
-              videos.map((video) => {
-                if (team === video.equipo) {
-                  return <Card
-                    key={video.id}
-                    title={video.titulo}
-                    description={video.descripcion}
-                    url={video.url}
-                    image={video.imagen}
-                    id={video.id}
-                    deleteVideo={deleteVideo}
-                  >
-                    <ModalEditarCard id={video.id} />
-                  </Card>
-                }
-              })
-            }
-          </Team>
-        }))
+        <Banner />
+        {
+          teams &&
+          teams.map(((team, index) => {
+            return <Team
+              title={team}
+              key={index}>
+              {
+                videos.map((video) => {
+                  if (team === video.equipo) {
+                    return <Card
+                      key={video.id}
+                      title={video.titulo}
+                      description={video.descripcion}
+                      url={video.url}
+                      image={video.imagen}
+                      id={video.id}
+                      deleteVideo={deleteVideo}
+                    >
+                      <ModalEditarCard id={video.id} />
+                    </Card>
+                  }
+                })
+              }
+            </Team>
+          }))
 
-      }
-      <VideoDetail />
+        }
+        <VideoDetail />
     </>
   )
 }

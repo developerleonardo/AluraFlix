@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Video.css'
 import { useParams } from 'react-router-dom'
+import { NotFound } from '../NotFound';
+import { MultimediaContext } from '../../Context';
 
 
 const Video = () => {
+    const {setIsSuccessful} = useContext(MultimediaContext);
     const [video, setVideo] = useState([]);
     const { id } = useParams();
     useEffect(() => {
@@ -12,13 +15,15 @@ const Video = () => {
             const fetchData = await fetch(`http://localhost:3000/videos/${id}`);
             const selectedVideo = await fetchData.json();
             setVideo(selectedVideo);
-        } catch {
-            console.log("Error, video not found");
+        } catch(error) {
+            console.error(error);
         }
       }
       getVideo()
     }, [])
     console.log(video);
+
+    if (video.length === 0) return <NotFound />
 
     return (
         <div className='video_container'>

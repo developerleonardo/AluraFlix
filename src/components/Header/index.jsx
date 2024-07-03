@@ -1,4 +1,6 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
+import { IoAddCircleOutline } from "react-icons/io5";
 import './Header.css';
 
 import React from 'react'
@@ -21,21 +23,36 @@ const Header = () => {
   }
 
   return (
-    <nav className='header_container'>
-      <p>ALURAFLIX</p>
-      <ul className='buttons_menu_container'>
-        <li className='li' >
-          <NavLink to='/' style={({ isActive }) => isActive ? activeStyle : button_menu}>
-            HOME
-          </NavLink>
-        </li>
-        <li className='li'>
-          <NavLink to='/nuevo-video' style={({ isActive }) => isActive ? activeStyle : button_menu}>
-            NUEVO VIDEO
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className='header_container'>
+        <Link to='/'>
+          <p>ALURAFLIX</p>
+        </Link>
+        <ul className='buttons_menu_container'>
+          <li className='li' >
+            <NavLink to='/' style={({ isActive }) => isActive ? activeStyle : button_menu}>
+              HOME
+            </NavLink>
+          </li>
+          <li className='li'>
+            <NavLink to='/nuevo-video' style={({ isActive }) => isActive ? activeStyle : button_menu}>
+              NUEVO VIDEO
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <div className='tabBar'>
+        <Link to={'/'}>
+          <FaHome />
+        </Link>
+        <Link to={'/nuevo-video'}>
+        <div className='new_video_icon'>
+          <IoAddCircleOutline />
+          <p>Nuevo Video</p>
+        </div>
+        </Link>
+      </div>
+    </>
   )
 }
 

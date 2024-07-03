@@ -65,3 +65,15 @@
     display: flex;
     gap: 24px;
 }
+
+@media (width < 630px) {
+    .newVideo_container {
+        height: auto;
+    }
+    .newForm_container {
+        width: 100%;
+    }
+    .grouped_inputs_container {
+        flex-direction: column;
+    }
+}

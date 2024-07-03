@@ -12,6 +12,8 @@ const MultimediaContextProvider = ({ children }) => {
   const [videoToShow, setVideoToShow] = useState([]);
   // State which contains the current id of any video which is setted with the function openModal
   const [currentVideoId, setCurrentVideoId] = useState(null);
+  const [isSuccessful, setIsSuccessful] = useState(false);
+
   const openVideoDetail = () => {
     setIsAsideOpen(true);
   };
@@ -36,8 +38,8 @@ const MultimediaContextProvider = ({ children }) => {
         const conection = await fetch('http://localhost:3000/videos');
         const data = await conection.json();
         setVideos(data);
-      } catch {
-        console.log("Ocurrio un error");
+      } catch(error) {
+        console.error(error);
       }
     }
     fetchData()
@@ -45,13 +47,16 @@ const MultimediaContextProvider = ({ children }) => {
 
   //Delete a video
   const deleteVideo = async (id) => {
-    await fetch(`http://localhost:3000/videos/${id}`, {
-      method: "DELETE",
-      headers: {
-        "content-type": "application/json"
-      },
-    });
-    setVideos((prevVideos) => prevVideos.filter(video => video.id !== id));
+    const isDeleted = confirm("Estás seguro que quieres eliminar este video?");
+    if (isDeleted) {
+      await fetch(`http://localhost:3000/videos/${id}`, {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json"
+        },
+      });
+      setVideos((prevVideos) => prevVideos.filter(video => video.id !== id));
+    }
   }
   //Update any information of a video
   const updateVideo = async (id, updatedInfo) => {
@@ -65,8 +70,8 @@ const MultimediaContextProvider = ({ children }) => {
       });
       const updatedVideo = JSON.parse(updatedInfo);
       setVideos((prevVideos) => prevVideos.map(video => (video.id === id ? updatedVideo : video)))
-    } catch {
-      console.log("Error updating the video");
+    } catch(error) {
+      console.error(error);
     }
   }
 
@@ -85,7 +90,9 @@ const MultimediaContextProvider = ({ children }) => {
       updateVideo,
       currentVideoId,
       videoToShow,
-      setVideoToShow
+      setVideoToShow,
+      isSuccessful,
+      setIsSuccessful,
     }}>
       {children}
     </MultimediaContext.Provider>

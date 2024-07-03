@@ -146,6 +146,14 @@
       "url": "https://www.youtube.com/embed/AG2QssLpQzI?si=6Yn355wcxAqU7_Ld",
       "descripcion": "Este video explica cómo utilizar las propiedades CSS display: block, inline, e inline-block. Se detallan sus diferencias, ejemplos de uso práctico, y cómo afectan el diseño y la disposición de los elementos en una página web.",
       "id": "e406"
+    },
+    {
+      "titulo": "Java super genial",
+      "equipo": "Innovación y gestión",
+      "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "url": "https://www.youtube.com/embed/o8x_n4Px1N0",
+      "descripcion": "Hello world",
+      "id": "e767"
     }
   ]
 }

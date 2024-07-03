@@ -29,3 +29,10 @@
     text-decoration: none;
     color: var(--white);
 }
+
+@media (width < 630px) {
+    .footer {
+        margin-bottom: 78px;
+        padding: 0 16px 0 16px;
+    }
+}

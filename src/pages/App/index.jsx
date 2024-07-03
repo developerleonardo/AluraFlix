@@ -7,6 +7,8 @@ import { Footer } from '../../components/Footer';
 import { MultimediaContextProvider } from '../../Context';
 import { NewVideo } from '../NewVideo';
 import { Video } from '../Video';
+import { NotFound } from '../NotFound';
+import { SuccesfulVideo } from '../SuccessfulVideo';
 
 
 const AppRoutes = () => {
@@ -15,6 +17,8 @@ const AppRoutes = () => {
     { path: '/', element: <Home /> },
     { path: '/nuevo-video', element: <NewVideo /> },
     { path: '/:id', element: <Video /> },
+    { path: '/success', element: <SuccesfulVideo /> },
+    { path: '*', element: <NotFound /> },
   ])
 
   return (

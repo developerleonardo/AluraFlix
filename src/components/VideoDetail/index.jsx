@@ -6,7 +6,7 @@ import './VideoDetail.css';
 import { Link } from 'react-router-dom';
 
 const VideoDetail = () => {
-    const { videos, isAsideOpen, closeVideoDetail, videoToShow } = useContext(MultimediaContext);
+    const { isAsideOpen, closeVideoDetail, videoToShow } = useContext(MultimediaContext);
     return (
         <>
             {
@@ -21,7 +21,7 @@ const VideoDetail = () => {
                     </figure>
                     <p className='video_description'>{videoToShow.description}</p>
                     <Link to={`http://localhost:5173/${videoToShow.id}`}>
-                        <button className='watch_video'>Ver Video</button>
+                        <button className='watch_video' onClick={closeVideoDetail}>Ver Video</button>
                     </Link>
                 </aside>
             }
