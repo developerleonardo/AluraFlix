@@ -43,7 +43,7 @@
       "titulo": "¿Sabes cómo organizar tu rutina de estudio? Descubre aquí | #aluramás",
       "equipo": "Innovación y gestión",
       "imagen": "https://i.ytimg.com/vi/3mDnrL8YVaA/maxresdefault.jpg",
-      "url": "https://www.youtube.com/embed/Nts3P35mHzE",
+      "url": "https://www.youtube.com/embed/3mDnrL8YVaA",
       "descripcion": "Este video proporciona consejos y estrategias para organizar eficazmente tu rutina de estudio, incluyendo técnicas de gestión del tiempo, creación de horarios y métodos para maximizar la productividad y el aprendizaje",
       "id": "7"
     },
@@ -149,11 +149,11 @@
     },
     {
       "titulo": "Java super genial",
-      "equipo": "Innovación y gestión",
+      "equipo": "Front end",
       "imagen": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
       "url": "https://www.youtube.com/embed/o8x_n4Px1N0",
-      "descripcion": "Hello world",
-      "id": "e767"
+      "descripcion": "Hola a todos",
+      "id": "b581"
     }
   ]
 }
